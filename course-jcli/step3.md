@@ -1,35 +1,35 @@
-Katacoda has a command line interface which helps to create the required files of courses and scenarios, etc.
+在用户根目录下，增加 jcli 的配置文件：
 
-You can install the CLI using the following command:
-`npm i katacoda-cli --global`{{execute}}
+`./jcli config gen -i=false > ~/.jenkins-cli.yaml`{{execute}}
 
-The commands follow the syntax
-`$ katacoda COMMAND`
-
-If you need help, to see the available commands, you can run
-`katacoda --help`{{execute}}
-
-To create a course, for example, called *test-course*, you can run the following command and follow the steps:
+然后，利用命令 `vim ~/.jenkins-cli.yaml`{{execute}} 把配置文件中的 `token` 修改为 `admin`：
 
 ```
-cd katacoda-scenario-examples
-katacoda courses:create
-```{{execute}}
+current: yourServer
+language: ""
+jenkins_servers:
+- name: yourServer
+  url: http://localhost:8080/jenkins
+  username: admin
+  token: admin
+  proxy: ""
+  proxyAuth: ""
+  insecureSkipVerify: true
+  description: ""
+preHooks: []
+postHooks: []
+pluginSuites: []
+mirrors:
+- name: default
+  url: http://mirrors.jenkins.io/
+- name: tsinghua
+  url: https://mirrors.tuna.tsinghua.edu.cn/jenkins/
+- name: huawei
+  url: https://mirrors.huaweicloud.com/jenkins/
+- name: tencent
+  url: https://mirrors.cloud.tencent.com/jenkins/
+```
 
-The CLI will prompt you a few questions about:
-- **Title:** title of the course, displayed on the intro screen
-- **Description:** description of the course, displayed on the intro screen
-- **Friendly-url:** here you will type `test-course`. This attribute will determine the name of the folder of your course, and the URL to access it, so, should not contain spaces, should be lower case, etc. For example, if your username is *test-username* and your course was called *test-course* the URL to point the course in the platform will be https://katacoda.com/test-username/courses/test-course/
+如果您仔细观察的话，可以发现，上面的配置文件中可以配置多个 Jenkins。下面的命令可以让你看到当前所选择的地址信息：
 
-After that the CLI will create the pathway file and the folder.
-`ls test-course*`{{execute}}
-
-You can see the definition of the empty course in `katacoda-scenario-examples/test-course-pathway.json`{{open}}
-
-<pre class="file">
-{
-  "title": "test-course",
-  "description": "Example course",
-  "courses": []
-}
-</pre>
+`./jcli config`{{execute}}

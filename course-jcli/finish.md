@@ -1,1 +1,1 @@
-Congratulations, you have learned how to make a course based on a collection of Katacoda scenarios.
+恭喜🎉，你已经完成 Jenkins CLI 的教程！！！

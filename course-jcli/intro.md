@@ -1,3 +1,1 @@
-In this scenario, you will learn how to create a course, a series of Katacoda scenarios collected together. 
-
-The advantage of creating a course is the ability to group related scenarios to provide users with a clear explanation and order to complete the content.
+在这个教程中，您可以体验如何通过 cli 来管理 Jenkins。同时，也欢迎您以各种形式给 [jcli](https://github.com/jenkins-zh/jenkins-cli) 项目做贡献。

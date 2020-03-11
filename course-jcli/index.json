@@ -4,20 +4,24 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Download",
+        "title": "步骤1 - 下载",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Setup",
+        "title": "步骤2 - 启动 Jenkins",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Install plugins",
+        "title": "步骤3 - 配置",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Create a pipeline",
+        "title": "步骤4 - 安装插件",
         "text": "step4.md"
+      },
+      {
+        "title": "步骤5 - 创建一个流水线",
+        "text": "step5.md"
       }
     ],
     "intro": {
@@ -31,6 +35,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "node"
+    "imageid": "ubuntu"
   }
 }

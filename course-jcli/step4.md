@@ -1,28 +1,11 @@
-The CLI can be used to add existing scenarios to a course.
+Jenkins 有丰富的[插件生态](https://plugins.jenkins.io/)，下面我们演示如何对插件进行搜索、安装、删除等操作。
 
-You can list your available scenarios, using this command:
-`find ./ -type f | grep index.json`{{execute}}
+首先，让我们先检查更新：`./jcli plugin check`{{execute}}
 
-For example, can add the existing scenario, called *quiz* to the previous created course *test-course* running the following command and follow the steps:
-`katacoda courses:add:scenarios`{{execute}}
+然后，可以根据关键字搜索我们所需要的插件：
 
-The CLI will prompt you a few questions about:
-- Scenario path: type `./quiz`
-- Course path: type `./test-course`
+`./jcli plugin search restful`{{execute}}
 
-And then select if you want to copy or move the scenario to the course folder.
+安装：`./jcli plugin install pipeline-restful-api`{{execute}}
 
-After that, you can see the scenario was added in your `test-course` opening `katacoda-scenario-examples/test-course-pathway.json`{{open}}
-
-<pre class="file">
-{
-  "title": "test-course",
-  "description": "Example course",
-  "courses": [
-    {
-      "course_id": "quiz",
-      "title": "Interactive Quiz",
-      "description": "Verify understand and key points by using an interactive quiz"
-    }
-  ]
-</pre>
+查看安装进度：`./jcli center watch`{{execute}}

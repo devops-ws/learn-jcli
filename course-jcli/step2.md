@@ -1,14 +1,5 @@
-A course can include scenarios in different directories. This allows scenarios to be re-used and re-purposed in different situations.
+为了方便命令的使用，首先启用命令的自动补全功能：`source <(jcli completion)`{{execute}}
 
-An example of this would be including the following:
+通过下面的命令可以下载并启动一个 Jenkins:
 
-<pre class="file">
-{
-    "pathway_id" "environment-usages",
-    "course_id": "ubuntu",
-    "title": "Ubuntu 16.04 Instance",
-    "description": "General purpose environment"
-},
-</pre>
-
-This would reference the scenario Ubuntu from the environment-usages course.
+`nohup ./jcli center start --context /jenkins --setup-wizard=false > jenkins.log 2>&1 &`{{execute}}

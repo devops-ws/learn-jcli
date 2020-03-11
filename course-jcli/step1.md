@@ -1,23 +1,7 @@
-A Katacoda course is defined by creating a pathway file. The pathway defines which scenarios should be included in the course and the order to display them.
+Linux 下的用户，可以通过下面的命令下载最新版本的 `jcli`
 
-The collection of examples contains two courses, one to describe all the Katacoda content and another to describe the key Katacoda environments.
+`curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv`{{execute}}
 
-## Clone Example
-
-Clone the example repository with the command `curl -L https://github.com/jenkins-zh/jenkins-cli/releases/latest/download/jcli-linux-amd64.tar.gz|tar xzv`{{execute}}
-
-Within the root of a repository, a course has been created called `uilayouts`. The contents of the course have been defined as `katacoda-scenario-examples/uilayouts-pathway.json`{{open}}.
+下载完成后，执行下面命令就可以看到所有的子命令：
 
 `./jcli`{{execute}}
-
-Within the JSON file, the courses element defines each scenario. For example:
-
-<pre class="file">
-{
-    "course_id": "uilayout-terminal",
-    "title": "Scenario with Terminal UI",
-    "description": "Katacoda Scenario Example"
-},
-</pre>
-
-The **course_id** is the scenario name directory within the course directory. For example `ls katacoda-scenario-examples/uilayouts/uilayout-terminal`{{execute}}. The **title** and **description** are shown on the course page.
