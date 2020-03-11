@@ -6,4 +6,4 @@
 
 下面的命令可以查看 Jenkins 的启动日志的：
 
-`tail -f jenkins.log`
+`tail -f jenkins.log`{{execute}}
